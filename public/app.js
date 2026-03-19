@@ -1,1 +1,450 @@
-Ly8gVHdpbGlvIFZvSVAgVGVzdGVyIC0gRnJvbnRlbmQgQXBwbGljYXRpb24gKFNESyAyLngpCi8vIEhhbmRsZXMgZGV2aWNlIGNvbm5lY3Rpb24sIGNhbGxpbmcsIGFuZCB3ZWJob29rIGluc3BlY3Rpb24KCmNsYXNzIFR3aWxpb1ZvSVBUZXN0ZXIgewogICAgY29uc3RydWN0b3IoKSB7CiAgICAgICAgdGhpcy5kZXZpY2UgPSBudWxsOwogICAgICAgIHRoaXMuYWN0aXZlQ2FsbCA9IG51bGw7CiAgICAgICAgdGhpcy5jb25maWcgPSB0aGlzLmxvYWRDb25maWcoKTsKICAgICAgICB0aGlzLmluaXRFbGVtZW50cygpOwogICAgICAgIHRoaXMuYmluZEV2ZW50cygpOwogICAgICAgIHRoaXMubG9hZENhbGxIaXN0b3J5KCk7CiAgICAgICAgdGhpcy5sb2FkV2ViaG9va0xvZ3MoKTsKICAgIH0KCiAgICBpbml0RWxlbWVudHMoKSB7CiAgICAgICAgLy8gU3RhdHVzIGVsZW1lbnRzCiAgICAgICAgdGhpcy5jb25uZWN0aW9uU3RhdHVzID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2Nvbm5lY3Rpb24tc3RhdHVzJyk7CiAgICAgICAgdGhpcy5zdGF0dXNUZXh0ID0gdGhpcy5jb25uZWN0aW9uU3RhdHVzLnF1ZXJ5U2VsZWN0b3IoJy5zdGF0dXMtdGV4dCcpOwogICAgICAgIHRoaXMuY29ubmVjdEJ0biA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjb25uZWN0LWJ0bicpOwoKICAgICAgICAvLyBDYWxsaW5nIGVsZW1lbnRzCiAgICAgICAgdGhpcy5waG9uZU51bWJlcklucHV0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Bob25lLW51bWJlcicpOwogICAgICAgIHRoaXMuY2FsbEJ0biA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjYWxsLWJ0bicpOwogICAgICAgIHRoaXMuaGFuZ3VwQnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2hhbmd1cC1idG4nKTsKICAgICAgICB0aGlzLmNhbGxTdGF0dXMgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnY2FsbC1zdGF0dXMnKTsKCiAgICAgICAgLy8gSW5jb21pbmcgY2FsbCBlbGVtZW50cwogICAgICAgIHRoaXMudHdpbGlvTnVtYmVyRGlzcGxheSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCd0d2lsaW8tbnVtYmVyJyk7CiAgICAgICAgdGhpcy5pbmNvbWluZ0NhbGxQYW5lbCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdpbmNvbWluZy1jYWxsJyk7CiAgICAgICAgdGhpcy5jYWxsZXJJZERpc3BsYXkgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnY2FsbGVyLWlkJyk7CiAgICAgICAgdGhpcy5hbnN3ZXJCdG4gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYW5zd2VyLWJ0bicpOwogICAgICAgIHRoaXMucmVqZWN0QnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3JlamVjdC1idG4nKTsKCiAgICAgICAgLy8gTG9ncwogICAgICAgIHRoaXMud2ViaG9va0xvZyA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCd3ZWJob29rLWxvZycpOwogICAgICAgIHRoaXMuY2FsbExvZ3MgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnY2FsbC1sb2dzJyk7CiAgICAgICAgdGhpcy5jbGVhckxvZ0J0biA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjbGVhci1sb2ctYnRuJyk7CiAgICAgICAgdGhpcy5jbGVhckhpc3RvcnlCdG4gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnY2xlYXItaGlzdG9yeS1idG4nKTsKCiAgICAgICAgLy8gQ29uZmlnIGVsZW1lbnRzCiAgICAgICAgdGhpcy5hY2NvdW50U2lkSW5wdXQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYWNjb3VudC1zaWQnKTsKICAgICAgICB0aGlzLmFwaUtleVNpZElucHV0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2FwaS1rZXktc2lkJyk7CiAgICAgICAgdGhpcy5hcGlLZXlTZWNyZXRJbnB1dCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdhcGkta2V5LXNlY3JldCcpOwogICAgICAgIHRoaXMudHdpbGlvUGhvbmVJbnB1dCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCd0d2lsaW8tcGhvbmUnKTsKICAgICAgICB0aGlzLnNhdmVDb25maWdCdG4gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc2F2ZS1jb25maWctYnRuJyk7CiAgICAgICAgdGhpcy50ZXN0V2ViaG9va0J0biA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCd0ZXN0LXdlYmhvb2stYnRuJyk7CgogICAgICAgIC8vIExvYWQgc2F2ZWQgY29uZmlnIGludG8gaW5wdXRzCiAgICAgICAgaWYgKHRoaXMuY29uZmlnKSB7CiAgICAgICAgICAgIHRoaXMuYWNjb3VudFNpZElucHV0LnZhbHVlID0gdGhpcy5jb25maWcuYWNjb3VudFNpZCB8fCAnJzsKICAgICAgICAgICAgdGhpcy5hcGlLZXlTaWRJbnB1dC52YWx1ZSA9IHRoaXMuY29uZmlnLmFwaUtleVNpZCB8fCAnJzsKICAgICAgICAgICAgdGhpcy5hcGlLZXlTZWNyZXRJbnB1dC52YWx1ZSA9IHRoaXMuY29uZmlnLmFwaUtleVNlY3JldCB8fCAnJzsKICAgICAgICAgICAgdGhpcy50d2lsaW9QaG9uZUlucHV0LnZhbHVlID0gdGhpcy5jb25maWcudHdpbGlvUGhvbmUgfHwgJyc7CiAgICAgICAgICAgIHRoaXMudHdpbGlvTnVtYmVyRGlzcGxheS50ZXh0Q29udGVudCA9IHRoaXMuY29uZmlnLnR3aWxpb1Bob25lIHx8ICdOb3QgY29uZmlndXJlZCc7CiAgICAgICAgfQogICAgfQoKICAgIGJpbmRFdmVudHMoKSB7CiAgICAgICAgdGhpcy5jb25uZWN0QnRuLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4gdGhpcy5jb25uZWN0RGV2aWNlKCkpOwogICAgICAgIHRoaXMuY2FsbEJ0bi5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsICgpID0+IHRoaXMubWFrZUNhbGwoKSk7CiAgICAgICAgdGhpcy5oYW5ndXBCdG4uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiB0aGlzLmhhbmd1cCgpKTsKICAgICAgICB0aGlzLmFuc3dlckJ0bi5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsICgpID0+IHRoaXMuYW5zd2VySW5jb21pbmdDYWxsKCkpOwogICAgICAgIHRoaXMucmVqZWN0QnRuLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4gdGhpcy5yZWplY3RJbmNvbWluZ0NhbGwoKSk7CiAgICAgICAgdGhpcy5zYXZlQ29uZmlnQnRuLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4gdGhpcy5zYXZlQ29uZmlnKCkpOwogICAgICAgIHRoaXMudGVzdFdlYmhvb2tCdG4uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiB0aGlzLmdlbmVyYXRlQ2FwYWJpbGl0eVRva2VuKCkpOwogICAgICAgIHRoaXMuY2xlYXJMb2dCdG4uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiB0aGlzLmNsZWFyV2ViaG9va0xvZygpKTsKICAgICAgICB0aGlzLmNsZWFySGlzdG9yeUJ0bi5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsICgpID0+IHRoaXMuY2xlYXJDYWxsSGlzdG9yeSgpKTsKICAgIH0KCiAgICBsb2FkQ29uZmlnKCkgewogICAgICAgIGNvbnN0IHNhdmVkID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3R3aWxpb192b2lwX2NvbmZpZycpOwogICAgICAgIHJldHVybiBzYXZlZCA/IEpTT04ucGFyc2Uoc2F2ZWQpIDogbnVsbDsKICAgIH0KCiAgICBzYXZlQ29uZmlnKCkgewogICAgICAgIHRoaXMuY29uZmlnID0gewogICAgICAgICAgICBhY2NvdW50U2lkOiB0aGlzLmFjY291bnRTaWRJbnB1dC52YWx1ZS50cmltKCksCiAgICAgICAgICAgIGFwaUtleVNpZDogdGhpcy5hcGlLZXlTaWRJbnB1dC52YWx1ZS50cmltKCksCiAgICAgICAgICAgIGFwaUtleVNlY3JldDogdGhpcy5hcGlLZXlTZWNyZXRJbnB1dC52YWx1ZS50cmltKCksCiAgICAgICAgICAgIHR3aWxpb1Bob25lOiB0aGlzLnR3aWxpb1Bob25lSW5wdXQudmFsdWUudHJpbSgpCiAgICAgICAgfTsKCiAgICAgICAgaWYgKCF0aGlzLmNvbmZpZy5hY2NvdW50U2lkIHx8ICF0aGlzLmNvbmZpZy5hcGlLZXlTaWQgfHwgIXRoaXMuY29uZmlnLmFwaUtleVNlY3JldCkgewogICAgICAgICAgICBhbGVydCgnUGxlYXNlIGZpbGwgaW4gQWNjb3VudCBTSUQsIEFQSSBLZXkgU0lELCBhbmQgQVBJIEtleSBTZWNyZXQnKTsKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIH0KCiAgICAgICAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oJ3R3aWxpb192b2lwX2NvbmZpZycsIEpTT04uc3RyaW5naWZ5KHRoaXMuY29uZmlnKSk7CiAgICAgICAgdGhpcy50d2lsaW9OdW1iZXJEaXNwbGF5LnRleHRDb250ZW50ID0gdGhpcy5jb25maWcudHdpbGlvUGhvbmUgfHwgJ05vdCBjb25maWd1cmVkJzsKICAgICAgICBhbGVydCgnQ29uZmlndXJhdGlvbiBzYXZlZCEgWW91IGNhbiBub3cgY29ubmVjdCB5b3VyIGRldmljZS4nKTsKICAgIH0KCiAgICBhc3luYyBjb25uZWN0RGV2aWNlKCkgewogICAgICAgIGlmICghdGhpcy5jb25maWcpIHsKICAgICAgICAgICAgYWxlcnQoJ1BsZWFzZSBjb25maWd1cmUgeW91ciBUd2lsaW8gY3JlZGVudGlhbHMgZmlyc3QnKTsKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIH0KCiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgdGhpcy51cGRhdGVDYWxsU3RhdHVzKCdHZXR0aW5nIGNhcGFiaWxpdHkgdG9rZW4uLi5gKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIC8vIEdldCBjYXBhYmlsaXR5IHRva2VuIGZyb20gYmFja2VuZCAodXNlcyBoYXJkY29kZWQgZW52IHZhcnMpCiAgICAgICAgICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2goJy9hcGkvdG9rZW4nLCB7CiAgICAgICAgICAgICAgICBtZXRob2Q6ICdQT1NUJywKICAgICAgICAgICAgICAgIGhlYWRlcnM6IHsgJ0NvbnRlbnQtVHlwZSc6ICdhcHBsaWNhdGlvbi9qc29uJyB9LAogICAgICAgICAgICAgICAgYm9keTogSlNPTi5zdHJpbmdpZnkodGhpcy5jb25maWcpCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgaWYgKCFyZXNwb25zZS5vaykgewogICAgICAgICAgICAgICAgY29uc3QgZXJyb3JEYXRhID0gYXdhaXQgcmVzcG9uc2UuanNvbigpLmNhdGNoKCgpID0+ICh7fSkpOwogICAgICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGVycm9yRGF0YS5lcnJvciB8fCAnRmFpbGVkIHRvIGdldCBjYXBhYmlsaXR5IHRva2VuJyk7CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGNvbnN0IGRhdGEgPSBhd2FpdCByZXNwb25zZS5qc29uKCk7CiAgICAgICAgICAgIGNvbnN0IHRva2VuID0gZGF0YS50b2tlbjsKCiAgICAgICAgICAgIC8vIFNESyAyLng6IENyZWF0ZSBkZXZpY2UgaW5zdGFuY2Ugd2l0aCBjb25zdHJ1Y3RvcgogICAgICAgICAgICB0aGlzLmRldmljZSA9IG5ldyBUd2lsaW8uRGV2aWNlKHRva2VuLCB7CiAgICAgICAgICAgICAgICBjb2RlY1ByZWZlcmVuY2VzOiBbJ29wdXMnLCAncGNtdSddLAogICAgICAgICAgICAgICAgZmFrZUxvY2FsRFRNRjogdHJ1ZSwKICAgICAgICAgICAgICAgIGVuYWJsZVJpbmdpbmdTdGF0ZTogdHJ1ZQogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIC8vIFNESyAyLng6IFVzZSAncmVnaXN0ZXJlZCcgZXZlbnQgaW5zdGVhZCBvZiAncmVhZHknCiAgICAgICAgICAgIHRoaXMuZGV2aWNlLm9uKCdyZWdpc3RlcmVkJywgKCkgPT4gewogICAgICAgICAgICAgICAgY29uc29sZS5sb2coJ1R3aWxpby5EZXZpY2UgcmVnaXN0ZXJlZCcpOwogICAgICAgICAgICAgICAgdGhpcy5zZXRDb25uZWN0ZWQodHJ1ZSk7CiAgICAgICAgICAgICAgICB0aGlzLnVwZGF0ZUNhbGxTdGF0dXMoJ0RldmljZSByZWdpc3RlcmVkIC0gWW91IGNhbiBtYWtlIGNhbGxzIG5vdycpOwogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIC8vIFNESyAyLng6IFVzZSAndW5yZWdpc3RlcmVkJyBldmVudCBpbnN0ZWFkIG9mICdvZmZsaW5lJwogICAgICAgICAgICB0aGlzLmRldmljZS5vbigndW5yZWdpc3RlcmVkJywgKCkgPT4gewogICAgICAgICAgICAgICAgY29uc29sZS5sb2coJ0RldmljZSB1bnJlZ2lzdGVyZWQnKTsKICAgICAgICAgICAgICAgIHRoaXMuc2V0Q29ubmVjdGVkKGZhbHNlKTsKICAgICAgICAgICAgICAgIHRoaXMudXBkYXRlQ2FsbFN0YXR1cygnRGV2aWNlIHVucmVnaXN0ZXJlZCcpOwogICAgICAgICAgICB9KTsKCiAgICAgICAgICAgIHRoaXMuZGV2aWNlLm9uKCdlcnJvcicsIChlcnJvcikgPT4gewogICAgICAgICAgICAgICAgY29uc29sZS5lcnJvcignVHdpbGlvLkRldmljZSBlcnJvcjonLCBlcnJvcik7CiAgICAgICAgICAgICAgICB0aGlzLnNldENvbm5lY3RlZChmYWxzZSk7CiAgICAgICAgICAgICAgICB0aGlzLnVwZGF0ZUNhbGxTdGF0dXMoYEVycm9yOiAke2Vycm9yLm1lc3NhZ2V9YCk7CiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgdGhpcy5kZXZpY2Uub24oJ2luY29taW5nJywgKGNhbGwpID0+IHsKICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKCdJbmNvbWluZyBjYWxsOicsIGNhbGwpOwogICAgICAgICAgICAgICAgdGhpcy5oYW5kbGVJbmNvbWluZ0NhbGwoY2FsbCk7CiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgLy8gU0RLIDIueDogRXhwbGljaXRseSByZWdpc3RlciB0byByZWNlaXZlIGluY29taW5nIGNhbGxzCiAgICAgICAgICAgIGF3YWl0IHRoaXMuZGV2aWNlLnJlZ2lzdGVyKCk7CgogICAgICAgIH0gY2F0Y2ggKGVycm9yKSB7CiAgICAgICAgICAgIGNvbnNvbGUuZXJyb3IoJ0Nvbm5lY3Rpb24gZXJyb3I6JywgZXJyb3IpOwogICAgICAgICAgICB0aGlzLnVwZGF0ZUNhbGxTdGF0dXMoYENvbm5lY3Rpb24gZmFpbGVkOiAke2Vycm9yLm1lc3NhZ2V9YCk7CiAgICAgICAgfQogICAgfQoKICAgIHNldENvbm5lY3RlZChjb25uZWN0ZWQpIHsKICAgICAgICBpZiAoY29ubmVjdGVkKSB7CiAgICAgICAgICAgIHRoaXMuY29ubmVjdGlvblN0YXR1cy5jbGFzc0xpc3QucmVtb3ZlKCdkaXNjb25uZWN0ZWQnKTsKICAgICAgICAgICAgdGhpcy5jb25uZWN0aW9uU3RhdHVzLmNsYXNzTGlzdC5hZGQoJ2Nvbm5lY3RlZCcpOwogICAgICAgICAgICB0aGlzLnN0YXR1c1RleHQudGV4dENvbnRlbnQgPSAnQ29ubmVjdGVkJzsKICAgICAgICAgICAgdGhpcy5jb25uZWN0QnRuLnRleHRDb250ZW50ID0gJ1JlY29ubmVjdCc7CiAgICAgICAgICAgIHRoaXMuY2FsbEJ0bi5kaXNhYmxlZCA9IGZhbHNlOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIHRoaXMuY29ubmVjdGlvblN0YXR1cy5jbGFzc0xpc3QucmVtb3ZlKCdjb25uZWN0ZWQnKTsKICAgICAgICAgICAgdGhpcy5jb25uZWN0aW9uU3RhdHVzLmNsYXNzTGlzdC5hZGQoJ2Rpc2Nvbm5lY3RlZCcpOwogICAgICAgICAgICB0aGlzLnN0YXR1c1RleHQudGV4dENvbnRlbnQgPSAnRGlzY29ubmVjdGVkJzsKICAgICAgICAgICAgdGhpcy5jb25uZWN0QnRuLnRleHRDb250ZW50ID0gJ0Nvbm5lY3QgRGV2aWNlJzsKICAgICAgICAgICAgdGhpcy5jYWxsQnRuLmRpc2FibGVkID0gdHJ1ZTsKICAgICAgICB9CiAgICB9CgogICAgYXN5bmMgbWFrZUNhbGwoKSB7CiAgICAgICAgY29uc3QgcGhvbmVOdW1iZXIgPSB0aGlzLnBob25lTnVtYmVySW5wdXQudmFsdWUudHJpbSgpOwogICAgICAgIGlmICghcGhvbmVOdW1iZXIpIHsKICAgICAgICAgICAgYWxlcnQoJ1BsZWFzZSBlbnRlciBhIHBob25lIG51bWJlcicpOwogICAgICAgICAgICByZXR1cm47CiAgICAgICAgfQoKICAgICAgICBpZiAoIXRoaXMuZGV2aWNlKSB7CiAgICAgICAgICAgIGFsZXJ0KCdEZXZpY2Ugbm90IGNvbm5lY3RlZCcpOwogICAgICAgICAgICByZXR1cm47CiAgICAgICAgfQoKICAgICAgICB0cnkgewogICAgICAgICAgICB0aGlzLnVwZGF0ZUNhbGxTdGF0dXMoYENhbGxpbmcgJHtwaG9uZU51bWJlcn0uLi5gKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIC8vIFNESyAyLng6IFByb21pc2UtYmFzZWQgY29ubmVjdCBBUEkKICAgICAgICAgICAgdGhpcy5hY3RpdmVDYWxsID0gYXdhaXQgdGhpcy5kZXZpY2UuY29ubmVjdCh7IHBhcmFtczogeyBUbzogcGhvbmVOdW1iZXIgfSB9KTsKICAgICAgICAgICAgdGhpcy5iaW5kQ2FsbEV2ZW50cygpOwogICAgICAgICAgICAKICAgICAgICAgICAgdGhpcy5jYWxsQnRuLmRpc2FibGVkID0gdHJ1ZTsKICAgICAgICAgICAgdGhpcy5oYW5ndXBCdG4uZGlzYWJsZWQgPSBmYWxzZTsKCiAgICAgICAgICAgIHRoaXMubG9nQ2FsbCh7CiAgICAgICAgICAgICAgICB0eXBlOiAnb3V0Z29pbmcnLAogICAgICAgICAgICAgICAgbnVtYmVyOiBwaG9uZU51bWJlciwKICAgICAgICAgICAgICAgIHN0YXR1czogJ2luaXRpYXRlZCcsCiAgICAgICAgICAgICAgICB0aW1lc3RhbXA6IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKQogICAgICAgICAgICB9KTsKCiAgICAgICAgfSBjYXRjaCAoZXJyb3IpIHsKICAgICAgICAgICAgY29uc29sZS5lcnJvcignQ2FsbCBlcnJvcjonLCBlcnJvcik7CiAgICAgICAgICAgIHRoaXMudXBkYXRlQ2FsbFN0YXR1cyhgQ2FsbCBmYWlsZWQ6ICR7ZXJyb3IubWVzc2FnZX1gKTsKICAgICAgICB9CiAgICB9CgogICAgYmluZENhbGxFdmVudHMoKSB7CiAgICAgICAgaWYgKCF0aGlzLmFjdGl2ZUNhbGwpIHJldHVybjsKCiAgICAgICAgdGhpcy5hY3RpdmVDYWxsLm9uKCdyaW5naW5nJywgKCkgPT4gewogICAgICAgICAgICBjb25zb2xlLmxvZygnUmluZ2luZy4uLicpOwogICAgICAgICAgICB0aGlzLnVwZGF0ZUNhbGxTdGF0dXMoJ1JpbmdpbmcuLi4nKTsKICAgICAgICB9KTsKCiAgICAgICAgdGhpcy5hY3RpdmVDYWxsLm9uKCdhY2NlcHQnLCAoKSA9PiB7CiAgICAgICAgICAgIGNvbnNvbGUubG9nKCdDYWxsIGFjY2VwdGVkJyk7CiAgICAgICAgICAgIHRoaXMudXBkYXRlQ2FsbFN0YXR1cygnQ2FsbCBpbiBwcm9ncmVzcy4uLicpOwogICAgICAgICAgICB0aGlzLnVwZGF0ZUNhbGxTdGF0dXMoJ0Nvbm5lY3RlZCcsICdzdWNjZXNzJyk7CiAgICAgICAgfSk7CgogICAgICAgIHRoaXMuYWN0aXZlQ2FsbC5vbignZGlzY29ubmVjdCcsICgpID0+IHsKICAgICAgICAgICAgY29uc29sZS5sb2coJ0NhbGwgZGlzY29ubmVjdGVkJyk7CiAgICAgICAgICAgIHRoaXMudXBkYXRlQ2FsbFN0YXR1cygnQ2FsbCBlbmRlZCcpOwogICAgICAgICAgICB0aGlzLmVuZENhbGwoKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIHRoaXMubG9nQ2FsbCh7CiAgICAgICAgICAgICAgICB0eXBlOiB0aGlzLmFjdGl2ZUNhbGwucGFyYW1ldGVycy5Gcm9tID8gJ2luY29taW5nJyA6ICdvdXRnb2luZycsCiAgICAgICAgICAgICAgICBudW1iZXI6IHRoaXMuYWN0aXZlQ2FsbC5wYXJhbWV0ZXJzLkZyb20gfHwgdGhpcy5waG9uZU51bWJlcklucHV0LnZhbHVlLAogICAgICAgICAgICAgICAgc3RhdHVzOiAnY29tcGxldGVkJywKICAgICAgICAgICAgICAgIGR1cmF0aW9uOiB0aGlzLmFjdGl2ZUNhbGwuX2R1cmF0aW9uIHx8IDAsCiAgICAgICAgICAgICAgICB0aW1lc3RhbXA6IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKQogICAgICAgICAgICB9KTsKICAgICAgICB9KTsKCiAgICAgICAgdGhpcy5hY3RpdmVDYWxsLm9uKCdlcnJvcicsIChlcnJvcikgPT4gewogICAgICAgICAgICBjb25zb2xlLmVycm9yKCdDYWxsIGVycm9yOicsIGVycm9yKTsKICAgICAgICAgICAgdGhpcy51cGRhdGVDYWxsU3RhdHVzKGBDYWxsIGVycm9yOiAke2Vycm9yLm1lc3NhZ2V9YCk7CiAgICAgICAgICAgIHRoaXMuZW5kQ2FsbCgpOwogICAgICAgIH0pOwogICAgfQoKICAgIGhhbmRsZUluY29taW5nQ2FsbChjYWxsKSB7CiAgICAgICAgdGhpcy5hY3RpdmVDYWxsID0gY2FsbDsKICAgICAgICBjb25zdCBjYWxsZXJJZCA9IGNhbGwucGFyYW1ldGVycy5Gcm9tIHx8ICdVbmtub3duJzsKICAgICAgICAKICAgICAgICB0aGlzLmNhbGxlcklkRGlzcGxheS50ZXh0Q29udGVudCA9IGNhbGxlcklkOwogICAgICAgIHRoaXMuaW5jb21pbmdDYWxsUGFuZWwuY2xhc3NMaXN0LnJlbW92ZSgnaGlkZGVuJyk7CiAgICAgICAgdGhpcy51cGRhdGVDYWxsU3RhdHVzKGBJbmNvbWluZyBjYWxsIGZyb20gJHtjYWxsZXJJZH1gKTsKCiAgICAgICAgdGhpcy5iaW5kQ2FsbEV2ZW50cygpOwogICAgICAgIAogICAgICAgIHRoaXMubG9nQ2FsbCh7CiAgICAgICAgICAgIHR5cGU6ICdpbmNvbWluZycsCiAgICAgICAgICAgIG51bWJlcjogY2FsbGVySWQsCiAgICAgICAgICAgIHN0YXR1czogJ3JpbmdpbmcnLAogICAgICAgICAgICB0aW1lc3RhbXA6IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKQogICAgICAgIH0pOwogICAgfQoKICAgIGFuc3dlckluY29taW5nQ2FsbCgpIHsKICAgICAgICBpZiAodGhpcy5hY3RpdmVDYWxsKSB7CiAgICAgICAgICAgIHRoaXMuYWN0aXZlQ2FsbC5hY2NlcHQoKTsKICAgICAgICAgICAgdGhpcy5pbmNvbWluZ0NhbGxQYW5lbC5jbGFzc0xpc3QuYWRkKCdoaWRkZW4nKTsKICAgICAgICAgICAgdGhpcy5jYWxsQnRuLmRpc2FibGVkID0gdHJ1ZTsKICAgICAgICAgICAgdGhpcy5oYW5ndXBCdG4uZGlzYWJsZWQgPSBmYWxzZTsKICAgICAgICAgICAgdGhpcy51cGRhdGVDYWxsU3RhdHVzKCdDYWxsIGluIHByb2dyZXNzLi4uJyk7CiAgICAgICAgfQogICAgfQoKICAgIHJlamVjdEluY29taW5nQ2FsbCgpIHsKICAgICAgICBpZiAodGhpcy5hY3RpdmVDYWxsKSB7CiAgICAgICAgICAgIHRoaXMuYWN0aXZlQ2FsbC5yZWplY3QoKTsKICAgICAgICAgICAgdGhpcy5pbmNvbWluZ0NhbGxQYW5lbC5jbGFzc0xpc3QuYWRkKCdoaWRkZW4nKTsKICAgICAgICAgICAgdGhpcy5lbmRDYWxsKCk7CiAgICAgICAgfQogICAgfQoKICAgIGhhbmd1cCgpIHsKICAgICAgICBpZiAodGhpcy5hY3RpdmVDYWxsKSB7CiAgICAgICAgICAgIHRoaXMuYWN0aXZlQ2FsbC5kaXNjb25uZWN0KCk7CiAgICAgICAgfQogICAgfQoKICAgIGVuZENhbGwoKSB7CiAgICAgICAgdGhpcy5hY3RpdmVDYWxsID0gbnVsbDsKICAgICAgICB0aGlzLmNhbGxCdG4uZGlzYWJsZWQgPSBmYWxzZTsKICAgICAgICB0aGlzLmhhbmd1cEJ0bi5kaXNhYmxlZCA9IHRydWU7CiAgICAgICAgdGhpcy5pbmNvbWluZ0NhbGxQYW5lbC5jbGFzc0xpc3QuYWRkKCdoaWRkZW4nKTsKICAgICAgICBzZXRUaW1lb3V0KCgpID0+IHsKICAgICAgICAgICAgaWYgKCF0aGlzLmFjdGl2ZUNhbGwpIHsKICAgICAgICAgICAgICAgIHRoaXMudXBkYXRlQ2FsbFN0YXR1cygnRGV2aWNlIHJlZ2lzdGVyZWQnKTsKICAgICAgICAgICAgfQogICAgICAgIH0sIDIwMDApOwogICAgfQoKICAgIHVwZGF0ZUNhbGxTdGF0dXMobWVzc2FnZSwgdHlwZSA9ICdpbmZvJykgewogICAgICAgIHRoaXMuY2FsbFN0YXR1cy50ZXh0Q29udGVudCA9IG1lc3NhZ2U7CiAgICAgICAgdGhpcy5jYWxsU3RhdHVzLnN0eWxlLmNvbG9yID0gdHlwZSA9PT0gJ3N1Y2Nlc3MnID8gJyMxMGI5ODEnIDogJyMzNzQxNTEnOwogICAgfQoKICAgIGxvZ0NhbGwoY2FsbERhdGEpIHsKICAgICAgICAvLyBHZXQgZXhpc3RpbmcgaGlzdG9yeQogICAgICAgIGNvbnN0IGhpc3RvcnkgPSB0aGlzLmdldENhbGxIaXN0b3J5KCk7CiAgICAgICAgCiAgICAgICAgLy8gQWRkIG5ldyBjYWxsCiAgICAgICAgaGlzdG9yeS51bnNoaWZ0KGNhbGxEYXRhKTsKICAgICAgICAKICAgICAgICAvLyBLZWVwIGxhc3QgNTAgY2FsbHMKICAgICAgICBpZiAoaGlzdG9yeS5sZW5ndGggPiA1MCkgewogICAgICAgICAgICBoaXN0b3J5LnBvcCgpOwogICAgICAgIH0KICAgICAgICAKICAgICAgICAvLyBTYXZlIHRvIGxvY2FsU3RvcmFnZQogICAgICAgIGxvY2FsU3RvcmFnZS5zZXRJdGVtKCd0d2lsaW9fY2FsbF9oaXN0b3J5JywgSlNPTi5zdHJpbmdpZnkoaGlzdG9yeSkpOwogICAgICAgIAogICAgICAgIC8vIFVwZGF0ZSBVSQogICAgICAgIHRoaXMubG9hZENhbGxIaXN0b3J5KCk7CiAgICB9CgogICAgZ2V0Q2FsbEhpc3RvcnkoKSB7CiAgICAgICAgY29uc3Qgc2F2ZWQgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgndHdpbGlvX2NhbGxfaGlzdG9yeScpOwogICAgICAgIHJldHVybiBzYXZlZCA/IEpTT04ucGFyc2Uoc2F2ZWQpIDogW107CiAgICB9CgogICAgbG9hZENhbGxIaXN0b3J5KCkgewogICAgICAgIGNvbnN0IGhpc3RvcnkgPSB0aGlzLmdldENhbGxIaXN0b3J5KCk7CiAgICAgICAgCiAgICAgICAgaWYgKGhpc3RvcnkubGVuZ3RoID09PSAwKSB7CiAgICAgICAgICAgIHRoaXMuY2FsbExvZ3MuaW5uZXJIVE1MID0gJzxkaXYgY2xhc3M9ImxvZy1lbnRyeSBwbGFjZWhvbGRlciI+Tm8gY2FsbHMgeWV0Li4uPC9kaXY+JzsKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIH0KCiAgICAgICAgdGhpcy5jYWxsTG9ncy5pbm5lckhUTUwgPSBoaXN0b3J5Lm1hcChjYWxsID0+IHsKICAgICAgICAgICAgY29uc3QgZGF0ZSA9IG5ldyBEYXRlKGNhbGwudGltZXN0YW1wKTsKICAgICAgICAgICAgY29uc3QgaWNvbiA9IGNhbGwudHlwZSA9PT0gJ2luY29taW5nJyA/ICfwn5OlJyA6ICfwn5OeJzsKICAgICAgICAgICAgY29uc3Qgc3RhdHVzQ29sb3IgPSBjYWxsLnN0YXR1cyA9PT0gJ2NvbXBsZXRlZCcgPyAnIzEwYjk4MScgOiBjYWxsLnN0YXR1cyA9PT0gJ3JpbmdpbmcnID8gJyNmNTllMGInIDogJyM2YjcyODAnOwogICAgICAgICAgICAKICAgICAgICAgICAgcmV0dXJuIGAKICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImxvZy1lbnRyeSI+CiAgICAgICAgICAgICAgICAgICAgPGRpdj4ke2ljb259ICR7Y2FsbC50eXBlfSB0by9mcm9tICR7Y2FsbC5udW1iZXJ9PC9kaXY+CiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ibG9nLXRpbWVzdGFtcCI+CiAgICAgICAgICAgICAgICAgICAgICAgICR7ZGF0ZS50b0xvY2FsZVN0cmluZygpfSDigKIgCiAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIHN0eWxlPSJjb2xvcjogJHtzdGF0dXNDb2xvcn0iPiR7Y2FsbC5zdGF0dXN9PC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICAke2NhbGwuZHVyYXRpb24gPyBg4oCiICR7TWF0aC5yb3VuZChjYWxsLmR1cmF0aW9uKX1zYCA6ICcnfQogICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIGA7CiAgICAgICAgfSkuam9pbignJyk7CiAgICB9CgogICAgY2xlYXJDYWxsSGlzdG9yeSgpIHsKICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgndHdpbGlvX2NhbGxfaGlzdG9yeScpOwogICAgICAgIHRoaXMubG9hZENhbGxIaXN0b3J5KCk7CiAgICB9CgogICAgLy8gV2ViaG9vayBsb2dnaW5nIChzaW11bGF0ZWQgLSBhY3R1YWwgd2ViaG9va3MgZ28gdG8gYmFja2VuZCkKICAgIGxvZ1dlYmhvb2socGF5bG9hZCkgewogICAgICAgIGNvbnN0IGxvZ3MgPSB0aGlzLmdldFdlYmhvb2tMb2dzKCk7CiAgICAgICAgbG9ncy51bnNoaWZ0KHsKICAgICAgICAgICAgdGltZXN0YW1wOiBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCksCiAgICAgICAgICAgIHBheWxvYWQ6IHBheWxvYWQKICAgICAgICB9KTsKICAgICAgICAKICAgICAgICBpZiAobG9ncy5sZW5ndGggPiA1MCkgewogICAgICAgICAgICBsb2dzLnBvcCgpOwogICAgICAgIH0KICAgICAgICAKICAgICAgICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbSgndHdpbGlvX3dlYmhvb2tfbG9ncycsIEpTT04uc3RyaW5naWZ5KGxvZ3MpKTsKICAgICAgICB0aGlzLmxvYWRXZWJob29rTG9ncygpOwogICAgfQoKICAgIGdldFdlYmhvb2tMb2dzKCkgewogICAgICAgIGNvbnN0IHNhdmVkID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3R3aWxpb193ZWJob29rX2xvZ3MnKTsKICAgICAgICByZXR1cm4gc2F2ZWQgPyBKU09OLnBhcnNlKHNhdmVkKSA6IFtdOwogICAgfQoKICAgIGxvYWRXZWJob29rTG9ncygpIHsKICAgICAgICBjb25zdCBsb2dzID0gdGhpcy5nZXRXZWJob29rTG9ncygpOwogICAgICAgIAogICAgICAgIGlmIChsb2dzLmxlbmd0aCA9PT0gMCkgewogICAgICAgICAgICB0aGlzLndlYmhvb2tMb2cuaW5uZXJIVE1MID0gJzxkaXYgY2xhc3M9ImxvZy1lbnRyeSBwbGFjZWhvbGRlciI+Tm8gd2ViaG9va3MgcmVjZWl2ZWQgeWV0Li4uPC9kaXY+JzsKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIH0KCiAgICAgICAgdGhpcy53ZWJob29rTG9nLmlubmVySFRNTCA9IGxvZ3MubWFwKGxvZyA9PiB7CiAgICAgICAgICAgIGNvbnN0IGRhdGUgPSBuZXcgRGF0ZShsb2cudGltZXN0YW1wKTsKICAgICAgICAgICAgcmV0dXJuIGAKICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImxvZy1lbnRyeSI+CiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ibG9nLXRpbWVzdGFtcCI+JHtkYXRlLnRvTG9jYWxlU3RyaW5nKCl9PC9kaXY+CiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ibG9nLXBheWxvYWQiPiR7SlNPTi5zdHJpbmdpZnkobG9nLnBheWxvYWQsIG51bGwsIDIpfTwvZGl2PgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIGA7CiAgICAgICAgfSkuam9pbignJyk7CiAgICB9CgogICAgY2xlYXJXZWJob29rTG9nKCkgewogICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0d2lsaW9fd2ViaG9va19sb2dzJyk7CiAgICAgICAgdGhpcy5sb2FkV2ViaG9va0xvZ3MoKTsKICAgIH0KCiAgICBhc3luYyBnZW5lcmF0ZUNhcGFiaWxpdHlUb2tlbigpIHsKICAgICAgICBpZiAoIXRoaXMuY29uZmlnKSB7CiAgICAgICAgICAgIGFsZXJ0KCdQbGVhc2Ugc2F2ZSB5b3VyIGNvbmZpZ3VyYXRpb24gZmlyc3QnKTsKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIH0KCiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaCgnL2FwaS90b2tlbicsIHsKICAgICAgICAgICAgICAgIG1ldGhvZDogJ1BPU1QnLAogICAgICAgICAgICAgICAgaGVhZGVyczogeyAnQ29udGVudC1UeXBlJzogJ2FwcGxpY2F0aW9uL2pzb24nIH0sCiAgICAgICAgICAgICAgICBib2R5OiBKU09OLnN0cmluZ2lmeSh0aGlzLmNvbmZpZykKICAgICAgICAgICAgfSk7CgogICAgICAgICAgICBjb25zdCBkYXRhID0gYXdhaXQgcmVzcG9uc2UuanNvbigpOwogICAgICAgICAgICAKICAgICAgICAgICAgaWYgKHJlc3BvbnNlLm9rKSB7CiAgICAgICAgICAgICAgICBhbGVydCgnQ2FwYWJpbGl0eSB0b2tlbiBnZW5lcmF0ZWQgc3VjY2Vzc2Z1bGx5ISBDaGVjayBicm93c2VyIGNvbnNvbGUgZm9yIGRldGFpbHMuJyk7CiAgICAgICAgICAgICAgICBjb25zb2xlLmxvZygnVG9rZW46JywgZGF0YS50b2tlbik7CiAgICAgICAgICAgICAgICBjb25zb2xlLmxvZygnSWRlbnRpdHk6JywgZGF0YS5pZGVudGl0eSk7CiAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICBhbGVydChgRXJyb3I6ICR7ZGF0YS5lcnJvcn1gKTsKICAgICAgICAgICAgfQogICAgICAgIH0gY2F0Y2ggKGVycm9yKSB7CiAgICAgICAgICAgIGFsZXJ0KGBGYWlsZWQgdG8gZ2VuZXJhdGUgdG9rZW46ICR7ZXJyb3IubWVzc2FnZX1gKTsKICAgICAgICB9CiAgICB9Cn0KCi8vIEluaXRpYWxpemUgdGhlIGFwcGxpY2F0aW9uIHdoZW4gRE9NIGlzIGZ1bGx5IGxvYWRlZApkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCdET01Db250ZW50TG9hZGVkJywgKCkgPT4gewogICAgY29uc3QgYXBwID0gbmV3IFR3aWxpb1ZvSVBUZXN0ZXIoKTsKCiAgICAvLyBMaXN0ZW4gZm9yIHdlYmhvb2sgZXZlbnRzIGZyb20gYmFja2VuZCAodmlhIFNlcnZlci1TZW50IEV2ZW50cyBvciBwb2xsaW5nKQogICAgLy8gRm9yIHNpbXBsaWNpdHksIHdlJ2xsIHVzZSBhIHNpbXBsZSBwb2xsaW5nIG1lY2hhbmlzbQogICAgc2V0SW50ZXJ2YWwoYXN5bmMgKCkgPT4gewogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2goJy9hcGkvd2ViaG9va3MvcmVjZW50Jyk7CiAgICAgICAgICAgIGlmIChyZXNwb25zZS5vaykgewogICAgICAgICAgICAgICAgY29uc3Qgd2ViaG9va3MgPSBhd2FpdCByZXNwb25zZS5qc29uKCk7CiAgICAgICAgICAgICAgICB3ZWJob29rcy5mb3JFYWNoKHdlYmhvb2sgPT4gewogICAgICAgICAgICAgICAgICAgIGFwcC5sb2dXZWJob29rKHdlYmhvb2spOwogICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgIH0KICAgICAgICB9IGNhdGNoIChlcnJvcikgewogICAgICAgICAgICAvLyBTaWxlbnRseSBmYWlsIC0gYmFja2VuZCBtaWdodCBub3QgYmUgcnVubmluZwogICAgICAgIH0KICAgIH0sIDUwMDApOyAvLyBQb2xsIGV2ZXJ5IDUgc2Vjb25kcwp9KTsK
+// Twilio VoIP Tester - Frontend Application (SDK 2.x)
+// Handles device connection, calling, and webhook inspection
+
+class TwilioVoIPTester {
+    constructor() {
+        this.device = null;
+        this.activeCall = null;
+        this.config = this.loadConfig();
+        this.initElements();
+        this.bindEvents();
+        this.loadCallHistory();
+        this.loadWebhookLogs();
+    }
+
+    initElements() {
+        // Status elements
+        this.connectionStatus = document.getElementById('connection-status');
+        this.statusText = this.connectionStatus.querySelector('.status-text');
+        this.connectBtn = document.getElementById('connect-btn');
+
+        // Calling elements
+        this.phoneNumberInput = document.getElementById('phone-number');
+        this.callBtn = document.getElementById('call-btn');
+        this.hangupBtn = document.getElementById('hangup-btn');
+        this.callStatus = document.getElementById('call-status');
+
+        // Incoming call elements
+        this.twilioNumberDisplay = document.getElementById('twilio-number');
+        this.incomingCallPanel = document.getElementById('incoming-call');
+        this.callerIdDisplay = document.getElementById('caller-id');
+        this.answerBtn = document.getElementById('answer-btn');
+        this.rejectBtn = document.getElementById('reject-btn');
+
+        // Logs
+        this.webhookLog = document.getElementById('webhook-log');
+        this.callLogs = document.getElementById('call-logs');
+        this.clearLogBtn = document.getElementById('clear-log-btn');
+        this.clearHistoryBtn = document.getElementById('clear-history-btn');
+
+        // Config elements
+        this.accountSidInput = document.getElementById('account-sid');
+        this.apiKeySidInput = document.getElementById('api-key-sid');
+        this.apiKeySecretInput = document.getElementById('api-key-secret');
+        this.twilioPhoneInput = document.getElementById('twilio-phone');
+        this.saveConfigBtn = document.getElementById('save-config-btn');
+        this.testWebhookBtn = document.getElementById('test-webhook-btn');
+
+        // Load saved config into inputs
+        if (this.config) {
+            this.accountSidInput.value = this.config.accountSid || '';
+            this.apiKeySidInput.value = this.config.apiKeySid || '';
+            this.apiKeySecretInput.value = this.config.apiKeySecret || '';
+            this.twilioPhoneInput.value = this.config.twilioPhone || '';
+            this.twilioNumberDisplay.textContent = this.config.twilioPhone || 'Not configured';
+        }
+    }
+
+    bindEvents() {
+        this.connectBtn.addEventListener('click', () => this.connectDevice());
+        this.callBtn.addEventListener('click', () => this.makeCall());
+        this.hangupBtn.addEventListener('click', () => this.hangup());
+        this.answerBtn.addEventListener('click', () => this.answerIncomingCall());
+        this.rejectBtn.addEventListener('click', () => this.rejectIncomingCall());
+        this.saveConfigBtn.addEventListener('click', () => this.saveConfig());
+        this.testWebhookBtn.addEventListener('click', () => this.generateCapabilityToken());
+        this.clearLogBtn.addEventListener('click', () => this.clearWebhookLog());
+        this.clearHistoryBtn.addEventListener('click', () => this.clearCallHistory());
+    }
+
+    loadConfig() {
+        const saved = localStorage.getItem('twilio_voip_config');
+        return saved ? JSON.parse(saved) : null;
+    }
+
+    saveConfig() {
+        this.config = {
+            accountSid: this.accountSidInput.value.trim(),
+            apiKeySid: this.apiKeySidInput.value.trim(),
+            apiKeySecret: this.apiKeySecretInput.value.trim(),
+            twilioPhone: this.twilioPhoneInput.value.trim()
+        };
+
+        if (!this.config.accountSid || !this.config.apiKeySid || !this.config.apiKeySecret) {
+            alert('Please fill in Account SID, API Key SID, and API Key Secret');
+            return;
+        }
+
+        localStorage.setItem('twilio_voip_config', JSON.stringify(this.config));
+        this.twilioNumberDisplay.textContent = this.config.twilioPhone || 'Not configured';
+        alert('Configuration saved! You can now connect your device.');
+    }
+
+    async connectDevice() {
+        if (!this.config) {
+            alert('Please configure your Twilio credentials first');
+            return;
+        }
+
+        try {
+            this.updateCallStatus('Getting capability token...');
+            
+            // Get capability token from backend (uses hardcoded env vars)
+            const response = await fetch('/api/token', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(this.config)
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.error || 'Failed to get capability token');
+            }
+
+            const data = await response.json();
+            const token = data.token;
+
+            // SDK 2.x: Create device instance with constructor
+            this.device = new Twilio.Device(token, {
+                codecPreferences: ['opus', 'pcmu'],
+                fakeLocalDTMF: true,
+                enableRingingState: true
+            });
+
+            // SDK 2.x: Use 'registered' event instead of 'ready'
+            this.device.on('registered', () => {
+                console.log('Twilio.Device registered');
+                this.setConnected(true);
+                this.updateCallStatus('Device registered - You can make calls now');
+            });
+
+            // SDK 2.x: Use 'unregistered' event instead of 'offline'
+            this.device.on('unregistered', () => {
+                console.log('Device unregistered');
+                this.setConnected(false);
+                this.updateCallStatus('Device unregistered');
+            });
+
+            this.device.on('error', (error) => {
+                console.error('Twilio.Device error:', error);
+                this.setConnected(false);
+                this.updateCallStatus(`Error: ${error.message}`);
+            });
+
+            this.device.on('incoming', (call) => {
+                console.log('Incoming call:', call);
+                this.handleIncomingCall(call);
+            });
+
+            // SDK 2.x: Explicitly register to receive incoming calls
+            await this.device.register();
+
+        } catch (error) {
+            console.error('Connection error:', error);
+            this.updateCallStatus(`Connection failed: ${error.message}`);
+        }
+    }
+
+    setConnected(connected) {
+        if (connected) {
+            this.connectionStatus.classList.remove('disconnected');
+            this.connectionStatus.classList.add('connected');
+            this.statusText.textContent = 'Connected';
+            this.connectBtn.textContent = 'Reconnect';
+            this.callBtn.disabled = false;
+        } else {
+            this.connectionStatus.classList.remove('connected');
+            this.connectionStatus.classList.add('disconnected');
+            this.statusText.textContent = 'Disconnected';
+            this.connectBtn.textContent = 'Connect Device';
+            this.callBtn.disabled = true;
+        }
+    }
+
+    async makeCall() {
+        const phoneNumber = this.phoneNumberInput.value.trim();
+        if (!phoneNumber) {
+            alert('Please enter a phone number');
+            return;
+        }
+
+        if (!this.device) {
+            alert('Device not connected');
+            return;
+        }
+
+        try {
+            this.updateCallStatus(`Calling ${phoneNumber}...`);
+            
+            // SDK 2.x: Promise-based connect API
+            this.activeCall = await this.device.connect({ params: { To: phoneNumber } });
+            this.bindCallEvents();
+            
+            this.callBtn.disabled = true;
+            this.hangupBtn.disabled = false;
+
+            this.logCall({
+                type: 'outgoing',
+                number: phoneNumber,
+                status: 'initiated',
+                timestamp: new Date().toISOString()
+            });
+
+        } catch (error) {
+            console.error('Call error:', error);
+            this.updateCallStatus(`Call failed: ${error.message}`);
+        }
+    }
+
+    bindCallEvents() {
+        if (!this.activeCall) return;
+
+        this.activeCall.on('ringing', () => {
+            console.log('Ringing...');
+            this.updateCallStatus('Ringing...');
+        });
+
+        this.activeCall.on('accept', () => {
+            console.log('Call accepted');
+            this.updateCallStatus('Call in progress...');
+            this.updateCallStatus('Connected', 'success');
+        });
+
+        this.activeCall.on('disconnect', () => {
+            console.log('Call disconnected');
+            this.updateCallStatus('Call ended');
+            this.endCall();
+            
+            this.logCall({
+                type: this.activeCall.parameters.From ? 'incoming' : 'outgoing',
+                number: this.activeCall.parameters.From || this.phoneNumberInput.value,
+                status: 'completed',
+                duration: this.activeCall._duration || 0,
+                timestamp: new Date().toISOString()
+            });
+        });
+
+        this.activeCall.on('error', (error) => {
+            console.error('Call error:', error);
+            this.updateCallStatus(`Call error: ${error.message}`);
+            this.endCall();
+        });
+    }
+
+    handleIncomingCall(call) {
+        this.activeCall = call;
+        const callerId = call.parameters.From || 'Unknown';
+        
+        this.callerIdDisplay.textContent = callerId;
+        this.incomingCallPanel.classList.remove('hidden');
+        this.updateCallStatus(`Incoming call from ${callerId}`);
+
+        this.bindCallEvents();
+        
+        this.logCall({
+            type: 'incoming',
+            number: callerId,
+            status: 'ringing',
+            timestamp: new Date().toISOString()
+        });
+    }
+
+    answerIncomingCall() {
+        if (this.activeCall) {
+            this.activeCall.accept();
+            this.incomingCallPanel.classList.add('hidden');
+            this.callBtn.disabled = true;
+            this.hangupBtn.disabled = false;
+            this.updateCallStatus('Call in progress...');
+        }
+    }
+
+    rejectIncomingCall() {
+        if (this.activeCall) {
+            this.activeCall.reject();
+            this.incomingCallPanel.classList.add('hidden');
+            this.endCall();
+        }
+    }
+
+    hangup() {
+        if (this.activeCall) {
+            this.activeCall.disconnect();
+        }
+    }
+
+    endCall() {
+        this.activeCall = null;
+        this.callBtn.disabled = false;
+        this.hangupBtn.disabled = true;
+        this.incomingCallPanel.classList.add('hidden');
+        setTimeout(() => {
+            if (!this.activeCall) {
+                this.updateCallStatus('Device registered');
+            }
+        }, 2000);
+    }
+
+    updateCallStatus(message, type = 'info') {
+        this.callStatus.textContent = message;
+        this.callStatus.style.color = type === 'success' ? '#10b981' : '#374151';
+    }
+
+    logCall(callData) {
+        // Get existing history
+        const history = this.getCallHistory();
+        
+        // Add new call
+        history.unshift(callData);
+        
+        // Keep last 50 calls
+        if (history.length > 50) {
+            history.pop();
+        }
+        
+        // Save to localStorage
+        localStorage.setItem('twilio_call_history', JSON.stringify(history));
+        
+        // Update UI
+        this.loadCallHistory();
+    }
+
+    getCallHistory() {
+        const saved = localStorage.getItem('twilio_call_history');
+        return saved ? JSON.parse(saved) : [];
+    }
+
+    loadCallHistory() {
+        const history = this.getCallHistory();
+        
+        if (history.length === 0) {
+            this.callLogs.innerHTML = '<div class="log-entry placeholder">No calls yet...</div>';
+            return;
+        }
+
+        this.callLogs.innerHTML = history.map(call => {
+            const date = new Date(call.timestamp);
+            const icon = call.type === 'incoming' ? '📥' : '📞';
+            const statusColor = call.status === 'completed' ? '#10b981' : call.status === 'ringing' ? '#f59e0b' : '#6b7280';
+            
+            return `
+                <div class="log-entry">
+                    <div>${icon} ${call.type} to/from ${call.number}</div>
+                    <div class="log-timestamp">
+                        ${date.toLocaleString()} • 
+                        <span style="color: ${statusColor}">${call.status}</span>
+                        ${call.duration ? `• ${Math.round(call.duration)}s` : ''}
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    clearCallHistory() {
+        localStorage.removeItem('twilio_call_history');
+        this.loadCallHistory();
+    }
+
+    // Webhook logging (simulated - actual webhooks go to backend)
+    logWebhook(payload) {
+        const logs = this.getWebhookLogs();
+        logs.unshift({
+            timestamp: new Date().toISOString(),
+            payload: payload
+        });
+        
+        if (logs.length > 50) {
+            logs.pop();
+        }
+        
+        localStorage.setItem('twilio_webhook_logs', JSON.stringify(logs));
+        this.loadWebhookLogs();
+    }
+
+    getWebhookLogs() {
+        const saved = localStorage.getItem('twilio_webhook_logs');
+        return saved ? JSON.parse(saved) : [];
+    }
+
+    loadWebhookLogs() {
+        const logs = this.getWebhookLogs();
+        
+        if (logs.length === 0) {
+            this.webhookLog.innerHTML = '<div class="log-entry placeholder">No webhooks received yet...</div>';
+            return;
+        }
+
+        this.webhookLog.innerHTML = logs.map(log => {
+            const date = new Date(log.timestamp);
+            return `
+                <div class="log-entry">
+                    <div class="log-timestamp">${date.toLocaleString()}</div>
+                    <div class="log-payload">${JSON.stringify(log.payload, null, 2)}</div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    clearWebhookLog() {
+        localStorage.removeItem('twilio_webhook_logs');
+        this.loadWebhookLogs();
+    }
+
+    async generateCapabilityToken() {
+        if (!this.config) {
+            alert('Please save your configuration first');
+            return;
+        }
+
+        try {
+            const response = await fetch('/api/token', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(this.config)
+            });
+
+            const data = await response.json();
+            
+            if (response.ok) {
+                alert('Capability token generated successfully! Check browser console for details.');
+                console.log('Token:', data.token);
+                console.log('Identity:', data.identity);
+            } else {
+                alert(`Error: ${data.error}`);
+            }
+        } catch (error) {
+            alert(`Failed to generate token: ${error.message}`);
+        }
+    }
+}
+
+// Initialize the application when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const app = new TwilioVoIPTester();
+
+    // Listen for webhook events from backend (via Server-Sent Events or polling)
+    // For simplicity, we'll use a simple polling mechanism
+    setInterval(async () => {
+        try {
+            const response = await fetch('/api/webhooks/recent');
+            if (response.ok) {
+                const webhooks = await response.json();
+                webhooks.forEach(webhook => {
+                    app.logWebhook(webhook);
+                });
+            }
+        } catch (error) {
+            // Silently fail - backend might not be running
+        }
+    }, 5000); // Poll every 5 seconds
+});
