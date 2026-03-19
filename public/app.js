@@ -5,7 +5,6 @@ class TwilioVoIPTester {
     constructor() {
         this.device = null;
         this.activeCall = null;
-        this.config = this.loadConfig();
         this.initElements();
         this.bindEvents();
         this.loadCallHistory();
@@ -36,23 +35,6 @@ class TwilioVoIPTester {
         this.callLogs = document.getElementById('call-logs');
         this.clearLogBtn = document.getElementById('clear-log-btn');
         this.clearHistoryBtn = document.getElementById('clear-history-btn');
-
-        // Config elements
-        this.accountSidInput = document.getElementById('account-sid');
-        this.apiKeySidInput = document.getElementById('api-key-sid');
-        this.apiKeySecretInput = document.getElementById('api-key-secret');
-        this.twilioPhoneInput = document.getElementById('twilio-phone');
-        this.saveConfigBtn = document.getElementById('save-config-btn');
-        this.testWebhookBtn = document.getElementById('test-webhook-btn');
-
-        // Load saved config into inputs
-        if (this.config) {
-            this.accountSidInput.value = this.config.accountSid || '';
-            this.apiKeySidInput.value = this.config.apiKeySid || '';
-            this.apiKeySecretInput.value = this.config.apiKeySecret || '';
-            this.twilioPhoneInput.value = this.config.twilioPhone || '';
-            this.twilioNumberDisplay.textContent = this.config.twilioPhone || 'Not configured';
-        }
     }
 
     bindEvents() {
@@ -61,57 +43,32 @@ class TwilioVoIPTester {
         this.hangupBtn.addEventListener('click', () => this.hangup());
         this.answerBtn.addEventListener('click', () => this.answerIncomingCall());
         this.rejectBtn.addEventListener('click', () => this.rejectIncomingCall());
-        this.saveConfigBtn.addEventListener('click', () => this.saveConfig());
-        this.testWebhookBtn.addEventListener('click', () => this.generateCapabilityToken());
         this.clearLogBtn.addEventListener('click', () => this.clearWebhookLog());
         this.clearHistoryBtn.addEventListener('click', () => this.clearCallHistory());
     }
 
-    loadConfig() {
-        const saved = localStorage.getItem('twilio_voip_config');
-        return saved ? JSON.parse(saved) : null;
-    }
-
-    saveConfig() {
-        this.config = {
-            accountSid: this.accountSidInput.value.trim(),
-            apiKeySid: this.apiKeySidInput.value.trim(),
-            apiKeySecret: this.apiKeySecretInput.value.trim(),
-            twilioPhone: this.twilioPhoneInput.value.trim()
-        };
-
-        if (!this.config.accountSid || !this.config.apiKeySid || !this.config.apiKeySecret) {
-            alert('Please fill in Account SID, API Key SID, and API Key Secret');
-            return;
-        }
-
-        localStorage.setItem('twilio_voip_config', JSON.stringify(this.config));
-        this.twilioNumberDisplay.textContent = this.config.twilioPhone || 'Not configured';
-        alert('Configuration saved! You can now connect your device.');
-    }
-
     async connectDevice() {
-        if (!this.config) {
-            alert('Please configure your Twilio credentials first');
-            return;
-        }
-
         try {
             this.updateCallStatus('Getting capability token...');
             
-            // Get capability token from backend
+            // Get capability token from backend (uses hardcoded env vars)
             const response = await fetch('/api/token', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(this.config)
+                headers: { 'Content-Type': 'application/json' }
             });
 
             if (!response.ok) {
-                throw new Error('Failed to get capability token');
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.error || 'Failed to get capability token');
             }
 
             const data = await response.json();
             const token = data.token;
+
+            // Update Twilio number display
+            if (data.twilioPhone) {
+                this.twilioNumberDisplay.textContent = data.twilioPhone;
+            }
 
             // Initialize Twilio Device
             this.device = new Twilio.Device(token, {
@@ -145,6 +102,7 @@ class TwilioVoIPTester {
         } catch (error) {
             console.error('Connection error:', error);
             this.updateCallStatus(`Connection failed: ${error.message}`);
+            alert(`Connection failed: ${error.message}`);
         }
     }
 
@@ -390,33 +348,6 @@ class TwilioVoIPTester {
     clearWebhookLog() {
         localStorage.removeItem('twilio_webhook_logs');
         this.loadWebhookLogs();
-    }
-
-    async generateCapabilityToken() {
-        if (!this.config) {
-            alert('Please save your configuration first');
-            return;
-        }
-
-        try {
-            const response = await fetch('/api/token', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(this.config)
-            });
-
-            const data = await response.json();
-            
-            if (response.ok) {
-                alert('Capability token generated successfully! Check browser console for details.');
-                console.log('Token:', data.token);
-                console.log('Identity:', data.identity);
-            } else {
-                alert(`Error: ${data.error}`);
-            }
-        } catch (error) {
-            alert(`Failed to generate token: ${error.message}`);
-        }
     }
 }
 
