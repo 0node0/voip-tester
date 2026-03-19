@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dash Authority - Twilio VoIP Tester</title>
-    <script src="https://sdk.twilio.com/v1/6.3.0/twilio-client.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@twilio/voice-sdk@2.18.0/dist/twilio.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
         <!-- Incoming Call Panel -->
         <div class="panel">
             <h2>📥 Receive Calls</h2>
-            <p>Your Twilio number: <strong id="twilio-number">Loading...</strong></p>
+            <p>Your Twilio number: <strong id="twilio-number">Not configured</strong></p>
             <div id="incoming-call" class="incoming-call hidden">
                 <p>Incoming call from: <strong id="caller-id"></strong></p>
                 <button id="answer-btn" class="btn btn-success">Answer</button>
@@ -60,6 +60,37 @@
                 <div class="log-entry placeholder">No calls yet...</div>
             </div>
             <button id="clear-history-btn" class="btn btn-secondary">Clear History</button>
+        </div>
+
+        <!-- Configuration -->
+        <div class="panel">
+            <h2>⚙️ Configuration</h2>
+            <details>
+                <summary>Twilio Settings</summary>
+                <div class="config-form">
+                    <label>
+                        Account SID:
+                        <input type="text" id="account-sid" placeholder="AC...">
+                    </label>
+                    <label>
+                        API Key SID:
+                        <input type="text" id="api-key-sid" placeholder="SK...">
+                    </label>
+                    <label>
+                        API Key Secret:
+                        <input type="password" id="api-key-secret" placeholder="Your API key secret">
+                    </label>
+                    <label>
+                        Twilio Phone Number:
+                        <input type="tel" id="twilio-phone" placeholder="+1...">
+                    </label>
+                    <button id="save-config-btn" class="btn btn-primary">Save Configuration</button>
+                    <button id="test-webhook-btn" class="btn btn-secondary">Generate Capability Token</button>
+                </div>
+                <p class="help-text">
+                    💡 <strong>Get your credentials:</strong> Go to <a href="https://console.twilio.com" target="_blank">Twilio Console</a> → API Keys → Create new API Key
+                </p>
+            </details>
         </div>
     </div>
 
