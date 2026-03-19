@@ -49,11 +49,15 @@ module.exports = function handler(req, res) {
     }
 
     try {
-        const { accountSid, apiKeySid, apiKeySecret } = req.body;
+        // Read credentials from environment variables
+        const accountSid = process.env.TWILIO_ACCOUNT_SID;
+        const apiKeySid = process.env.TWILIO_API_KEY_SID;
+        const apiKeySecret = process.env.TWILIO_API_KEY_SECRET;
+        const twilioPhone = process.env.TWILIO_PHONE_NUMBER;
 
         if (!accountSid || !apiKeySid || !apiKeySecret) {
             return res.status(400).json({
-                error: 'Missing required credentials: accountSid, apiKeySid, apiKeySecret'
+                error: 'Missing required environment variables: TWILIO_ACCOUNT_SID, TWILIO_API_KEY_SID, TWILIO_API_KEY_SECRET'
             });
         }
 
@@ -86,6 +90,7 @@ module.exports = function handler(req, res) {
         return res.status(200).json({
             token: jwt,
             identity: 'voip-tester-user',
+            twilioPhone: twilioPhone || null,
             success: true
         });
 
