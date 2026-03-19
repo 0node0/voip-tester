@@ -1,10 +1,11 @@
-// Twilio VoIP Tester - Frontend Application
+// Twilio VoIP Tester - Frontend Application (SDK 2.x)
 // Handles device connection, calling, and webhook inspection
 
 class TwilioVoIPTester {
     constructor() {
         this.device = null;
         this.activeCall = null;
+        this.config = this.loadConfig();
         this.initElements();
         this.bindEvents();
         this.loadCallHistory();
@@ -35,6 +36,23 @@ class TwilioVoIPTester {
         this.callLogs = document.getElementById('call-logs');
         this.clearLogBtn = document.getElementById('clear-log-btn');
         this.clearHistoryBtn = document.getElementById('clear-history-btn');
+
+        // Config elements
+        this.accountSidInput = document.getElementById('account-sid');
+        this.apiKeySidInput = document.getElementById('api-key-sid');
+        this.apiKeySecretInput = document.getElementById('api-key-secret');
+        this.twilioPhoneInput = document.getElementById('twilio-phone');
+        this.saveConfigBtn = document.getElementById('save-config-btn');
+        this.testWebhookBtn = document.getElementById('test-webhook-btn');
+
+        // Load saved config into inputs
+        if (this.config) {
+            this.accountSidInput.value = this.config.accountSid || '';
+            this.apiKeySidInput.value = this.config.apiKeySid || '';
+            this.apiKeySecretInput.value = this.config.apiKeySecret || '';
+            this.twilioPhoneInput.value = this.config.twilioPhone || '';
+            this.twilioNumberDisplay.textContent = this.config.twilioPhone || 'Not configured';
+        }
     }
 
     bindEvents() {
@@ -43,18 +61,49 @@ class TwilioVoIPTester {
         this.hangupBtn.addEventListener('click', () => this.hangup());
         this.answerBtn.addEventListener('click', () => this.answerIncomingCall());
         this.rejectBtn.addEventListener('click', () => this.rejectIncomingCall());
+        this.saveConfigBtn.addEventListener('click', () => this.saveConfig());
+        this.testWebhookBtn.addEventListener('click', () => this.generateCapabilityToken());
         this.clearLogBtn.addEventListener('click', () => this.clearWebhookLog());
         this.clearHistoryBtn.addEventListener('click', () => this.clearCallHistory());
     }
 
+    loadConfig() {
+        const saved = localStorage.getItem('twilio_voip_config');
+        return saved ? JSON.parse(saved) : null;
+    }
+
+    saveConfig() {
+        this.config = {
+            accountSid: this.accountSidInput.value.trim(),
+            apiKeySid: this.apiKeySidInput.value.trim(),
+            apiKeySecret: this.apiKeySecretInput.value.trim(),
+            twilioPhone: this.twilioPhoneInput.value.trim()
+        };
+
+        if (!this.config.accountSid || !this.config.apiKeySid || !this.config.apiKeySecret) {
+            alert('Please fill in Account SID, API Key SID, and API Key Secret');
+            return;
+        }
+
+        localStorage.setItem('twilio_voip_config', JSON.stringify(this.config));
+        this.twilioNumberDisplay.textContent = this.config.twilioPhone || 'Not configured';
+        alert('Configuration saved! You can now connect your device.');
+    }
+
     async connectDevice() {
+        if (!this.config) {
+            alert('Please configure your Twilio credentials first');
+            return;
+        }
+
         try {
             this.updateCallStatus('Getting capability token...');
             
             // Get capability token from backend (uses hardcoded env vars)
             const response = await fetch('/api/token', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' }
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(this.config)
             });
 
             if (!response.ok) {
@@ -65,22 +114,25 @@ class TwilioVoIPTester {
             const data = await response.json();
             const token = data.token;
 
-            // Update Twilio number display
-            if (data.twilioPhone) {
-                this.twilioNumberDisplay.textContent = data.twilioPhone;
-            }
-
-            // Initialize Twilio Device
+            // SDK 2.x: Create device instance with constructor
             this.device = new Twilio.Device(token, {
                 codecPreferences: ['opus', 'pcmu'],
                 fakeLocalDTMF: true,
                 enableRingingState: true
             });
 
-            this.device.on('ready', () => {
-                console.log('Twilio.Device ready');
+            // SDK 2.x: Use 'registered' event instead of 'ready'
+            this.device.on('registered', () => {
+                console.log('Twilio.Device registered');
                 this.setConnected(true);
-                this.updateCallStatus('Device ready - You can make calls now');
+                this.updateCallStatus('Device registered - You can make calls now');
+            });
+
+            // SDK 2.x: Use 'unregistered' event instead of 'offline'
+            this.device.on('unregistered', () => {
+                console.log('Device unregistered');
+                this.setConnected(false);
+                this.updateCallStatus('Device unregistered');
             });
 
             this.device.on('error', (error) => {
@@ -94,15 +146,12 @@ class TwilioVoIPTester {
                 this.handleIncomingCall(call);
             });
 
-            this.device.on('offline', () => {
-                console.log('Device offline');
-                this.setConnected(false);
-            });
+            // SDK 2.x: Explicitly register to receive incoming calls
+            await this.device.register();
 
         } catch (error) {
             console.error('Connection error:', error);
             this.updateCallStatus(`Connection failed: ${error.message}`);
-            alert(`Connection failed: ${error.message}`);
         }
     }
 
@@ -137,6 +186,7 @@ class TwilioVoIPTester {
         try {
             this.updateCallStatus(`Calling ${phoneNumber}...`);
             
+            // SDK 2.x: Promise-based connect API
             this.activeCall = await this.device.connect({ params: { To: phoneNumber } });
             this.bindCallEvents();
             
@@ -240,7 +290,7 @@ class TwilioVoIPTester {
         this.incomingCallPanel.classList.add('hidden');
         setTimeout(() => {
             if (!this.activeCall) {
-                this.updateCallStatus('Device ready');
+                this.updateCallStatus('Device registered');
             }
         }, 2000);
     }
@@ -348,6 +398,33 @@ class TwilioVoIPTester {
     clearWebhookLog() {
         localStorage.removeItem('twilio_webhook_logs');
         this.loadWebhookLogs();
+    }
+
+    async generateCapabilityToken() {
+        if (!this.config) {
+            alert('Please save your configuration first');
+            return;
+        }
+
+        try {
+            const response = await fetch('/api/token', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(this.config)
+            });
+
+            const data = await response.json();
+            
+            if (response.ok) {
+                alert('Capability token generated successfully! Check browser console for details.');
+                console.log('Token:', data.token);
+                console.log('Identity:', data.identity);
+            } else {
+                alert(`Error: ${data.error}`);
+            }
+        } catch (error) {
+            alert(`Failed to generate token: ${error.message}`);
+        }
     }
 }
 
