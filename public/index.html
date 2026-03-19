@@ -62,35 +62,12 @@
             <button id="clear-history-btn" class="btn btn-secondary">Clear History</button>
         </div>
 
-        <!-- Configuration -->
+        <!-- Info -->
         <div class="panel">
-            <h2>⚙️ Configuration</h2>
-            <details>
-                <summary>Twilio Settings</summary>
-                <div class="config-form">
-                    <label>
-                        Account SID:
-                        <input type="text" id="account-sid" placeholder="AC...">
-                    </label>
-                    <label>
-                        API Key SID:
-                        <input type="text" id="api-key-sid" placeholder="SK...">
-                    </label>
-                    <label>
-                        API Key Secret:
-                        <input type="password" id="api-key-secret" placeholder="Your API key secret">
-                    </label>
-                    <label>
-                        Twilio Phone Number:
-                        <input type="tel" id="twilio-phone" placeholder="+1...">
-                    </label>
-                    <button id="save-config-btn" class="btn btn-primary">Save Configuration</button>
-                    <button id="test-webhook-btn" class="btn btn-secondary">Generate Capability Token</button>
-                </div>
-                <p class="help-text">
-                    💡 <strong>Get your credentials:</strong> Go to <a href="https://console.twilio.com" target="_blank">Twilio Console</a> → API Keys → Create new API Key
-                </p>
-            </details>
+            <h2>ℹ️ About</h2>
+            <p class="help-text">
+                This tool auto-fetches a Twilio capability token from <code>/api/token</code> on load. No manual credential configuration required.
+            </p>
         </div>
     </div>
 
