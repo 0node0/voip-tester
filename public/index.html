@@ -35,7 +35,7 @@
         <!-- Incoming Call Panel -->
         <div class="panel">
             <h2>📥 Receive Calls</h2>
-            <p>Your Twilio number: <strong id="twilio-number">Not configured</strong></p>
+            <p>Your Twilio number: <strong id="twilio-number">Loading...</strong></p>
             <div id="incoming-call" class="incoming-call hidden">
                 <p>Incoming call from: <strong id="caller-id"></strong></p>
                 <button id="answer-btn" class="btn btn-success">Answer</button>
@@ -60,37 +60,6 @@
                 <div class="log-entry placeholder">No calls yet...</div>
             </div>
             <button id="clear-history-btn" class="btn btn-secondary">Clear History</button>
-        </div>
-
-        <!-- Configuration -->
-        <div class="panel">
-            <h2>⚙️ Configuration</h2>
-            <details>
-                <summary>Twilio Settings</summary>
-                <div class="config-form">
-                    <label>
-                        Account SID:
-                        <input type="text" id="account-sid" placeholder="AC...">
-                    </label>
-                    <label>
-                        API Key SID:
-                        <input type="text" id="api-key-sid" placeholder="SK...">
-                    </label>
-                    <label>
-                        API Key Secret:
-                        <input type="password" id="api-key-secret" placeholder="Your API key secret">
-                    </label>
-                    <label>
-                        Twilio Phone Number:
-                        <input type="tel" id="twilio-phone" placeholder="+1...">
-                    </label>
-                    <button id="save-config-btn" class="btn btn-primary">Save Configuration</button>
-                    <button id="test-webhook-btn" class="btn btn-secondary">Generate Capability Token</button>
-                </div>
-                <p class="help-text">
-                    💡 <strong>Get your credentials:</strong> Go to <a href="https://console.twilio.com" target="_blank">Twilio Console</a> → API Keys → Create new API Key
-                </p>
-            </details>
         </div>
     </div>
 
